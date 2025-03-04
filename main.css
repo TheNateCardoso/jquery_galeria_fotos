@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #5f27cd;
+    color:azure;
+    padding: 16px;
+    display: flex;
+    border-bottom: 16px solid #341f97;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+header button{
+    margin-left: 16px;
+}
+
+form{
+    background-color: #c8d6e5;
+    padding: 24px 0;
+    text-align: center;
+    display: none;
+}
+
+form h2{
+    margin-bottom: 16px;
+}
+
+input, button{
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+#botao-add{
+    background-color: #009432;
+    color:azure;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s
+}
+
+#botao-add:hover{
+    background-color: #00b33c;
+}
+
+#botao-new{
+    background-color: #d7b000c8;
+    color:azure;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s
+}
+
+#botao-new:hover{
+    background-color: #d3bb00e2;
+}
+
+#botao-cancel{
+    background-color: rgb(197, 0, 0);
+    color: azure;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#botao-cancel:hover{
+    background-color: rgba(255, 0, 0, 0.87);
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 20px; /* Espaço entre as imagens */
+    padding: 20px; /* Espaço entre as bordas da página e as imagens */
+    max-width: 1200px; /* Largura máxima do grid */
+    margin: 0 auto; /* Centraliza o grid na página */
+}
+
+ul li {
+    width: 100%; /* Ocupa 100% do espaço do grid cell */
+    height: 280px;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px; /* Opcional: bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Opcional: sombra suave */
+}
+
+@media (max-width: 768px) {
+    ul {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    ul {
+        grid-template-columns: 1fr; /* 1 coluna em celulares */
+    }
+}
+
+ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-img-link {
+    padding: 16px;
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    transition: all ease 0.5s;
+    color: azure;
+}
+
+.overlay-img-link a{
+    color: azure;
+    text-decoration: none;
+}
+
+ul li:hover .overlay-img-link {
+    opacity: 1;
+}
